@@ -1,0 +1,55 @@
+Part (a):
+What is the status of README.md after performing the following operations:
+...
+
+README.md is has now been cloned onto my VM in the folder Home>SampleRepo.
+
+Part (b):
+What is the status of README.md and fun_problem.txt after performing the following operations:
+...
+
+README.md has been updated and now contains the phrase "Markdown is easy" at the bottom of the file.
+fun_problem.txt has been added to the folder SampleRepo. It is empty.
+
+Part (c):
+What is the status of README.md and fun_problem.txt after performing the following operation:
+...
+
+fun_problem.txt is now ready to commit.
+
+Part (d):
+What is the status of README.md and fun_problem.txt after performing the following operations:
+...
+
+The line at the end of README.md has changed to "Markdown is too easy."
+The empty fun_problem.txt has become a part of the repository history.
+Now, fun_problem.txt contains one line that reads "So far, so good."
+
+Part (e):
+What is the status of README.md and fun_problem.txt after performing the following operations:
+...
+
+README.md is listed as having been "modified" in the git status. fun_problem.txt still says "So far, so good" as it is in the repository history.
+
+Also, what are the contents of fun_problem.txt? Why?
+
+fun_problem.txt is now empty again, because we used the command git checkout.
+
+
+Part (f):
+What is the status of README.md after performing the following operation:
+...
+
+Now, the end of README.md says "Markdown is too easy" and then "Fancy git move."
+
+Explain why this status was reached.
+
+
+Part (g):
+What are the last three lines the TAs will see in the README.md file on GitHub if you perform the following operations:
+...
+
+"Markdown is too easy"
+"Fancy git move"
+"In my quest to understand git"
+

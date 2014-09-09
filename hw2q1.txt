@@ -1,0 +1,23 @@
+Part (a):
+Every action line in a makefile must start with a:
+
+TAB
+
+Part (b):
+Look at this makefile and answer the following question. Assume this makefile is in the current directory, and all required files are available. Now we run the command
+
+make clean
+make shape1
+
+Which action(s) will get called? What compiler command(s) with what exact parameters will get executed as a result of the action(s)?
+
+Part (c):
+What is the purpose of a .PHONY rule?
+
+The .PHONY rule serves to avoid having a problem with a file of the same name by telling Make which targets aren't files (for instance, if you had a file named "clean," using .PHONY would allow the makefile to run "make clean" without problems). This also allows the makefile to run faster.
+
+Part (d):
+What are acceptable names for a makefile? Select all that applies.
+
+Makefile
+makefile
