@@ -11,6 +11,8 @@ hw2q4.txt contains the answer to #4 on the homework.
 
 hw2q5.cpp contains the code for #5 on the homework.
 
+hw2q5runtimes.txt contains additional answers for #5 on the homework.
+
 hw2q6.cpp contains the code for #6 on the homework.
 
 Have a great day!
