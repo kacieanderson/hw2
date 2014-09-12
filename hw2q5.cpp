@@ -12,7 +12,7 @@ int sumRecursive = 0;
 int sum(int[], int);
 
 int main(int argc, char ** argv){
-    const int ITERATE = 1000;
+    const int ITERATE = argc;
     clock_t startFor, startRecursive, finishFor, finishRecursive;
     double durFor, durRecursive;
     int numNums = 0;
@@ -36,7 +36,6 @@ int main(int argc, char ** argv){
         sumFor += temp;
       }
     }
-cout << "HERE " << startFor << endl;
    // finishFor = clock();
 
     durFor = (double)(finishFor - startFor);
