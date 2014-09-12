@@ -19,11 +19,13 @@ int main(int argc, char ** argv){
     string line;
     int *nums;
 
+    // grab the file & get the number of lines
     ifstream file(argv[1]);
     file >> numNums;
     nums = new int[numNums];
     getline(file, line);
 
+    // fill an array with all the numbers in int form
     for (int i = 0; i < numNums; i++){
       getline(file, line);
       nums[i] = atoi(line.c_str());
@@ -31,6 +33,7 @@ int main(int argc, char ** argv){
 
    //startFor = clock();
     for (int k = 0; k < ITERATE; k++){
+      // use a for loop to add those suckers
       for (int j = 0; j < numNums; j++){
         int temp = nums[j];
         sumFor += temp;
@@ -55,10 +58,11 @@ int main(int argc, char ** argv){
     cout << "Sum via recursion: " << sumRecursive << endl;
     cout << "Runtime of recursive function: " << scientific << durRecursive << endl;
 
-    delete [] nums;
+    delete [] nums; // deallocate memory
     return 0;
 }
 
+// a very simple recursive method to add everything in the array
 int sum(int nums[], int x){
     if (x == 0){
       return sumRecursive;
