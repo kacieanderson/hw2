@@ -97,9 +97,6 @@ cout << "Maximum Learning: " << tempMax << endl;
        allLearn.pop_front();
        backtrack(allWork, allLearn, numCourses, totalWork, tempMax, allWork[0], allLearn[0], 1);
       }
-    
- 
-    return 0;
 }
 
 
