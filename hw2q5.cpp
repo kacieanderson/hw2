@@ -17,11 +17,11 @@ int main(int argc, char ** argv){
     double durFor, durRecursive;
     int numNums = 0;
     string line;
+    int *nums;
 
     ifstream file(argv[1]);
     file >> numNums;
-    int *nums = new int[numNums];
-
+    nums = new int[numNums];
     getline(file, line);
 
     for (int i = 0; i < numNums; i++){
@@ -29,41 +29,42 @@ int main(int argc, char ** argv){
       nums[i] = atoi(line.c_str());
     }
 
-    startFor = clock();
+   //startFor = clock();
     for (int k = 0; k < ITERATE; k++){
       for (int j = 0; j < numNums; j++){
-        int temp = numNums[j];
+        int temp = nums[j];
         sumFor += temp;
       }
     }
-    finishFor = clock();
+cout << "HERE " << startFor << endl;
+   // finishFor = clock();
 
     durFor = (double)(finishFor - startFor);
     durFor /= (CLOCKS_PER_SEC * ITERATE);
 
-    startRecursive = clock();
+   // startRecursive = clock();
     for (int a = 0; a < ITERATE; a++){
-      sumRecursive = sum(nums, 0);
+      sumRecursive = sum(nums, numNums-1);
     }
-    finishRecursive = clock();
+   // finishRecursive = clock();
 
     durRecursive = (double)(finishRecursive - startRecursive);
     durRecursive /= (CLOCKS_PER_SEC * ITERATE);
 
     cout << "Sum via for loop: " << sumFor << endl;
-    cout << "Runtime of for loop: " << durFor << endl;
+    cout << "Runtime of for loop: " << scientific << durFor << endl;
     cout << "Sum via recursion: " << sumRecursive << endl;
-    cout << "Runtime of recursive function: " << durRecursive << endl;
+    cout << "Runtime of recursive function: " << scientific << durRecursive << endl;
 
     delete [] nums;
-
     return 0;
 }
 
 int sum(int nums[], int x){
-    if (x = sizeof(nums)){
+    if (x == 0){
       return sumRecursive;
     } else {
-      return nums[x] + sum(nums, x++);
+      sumRecursive = nums[x] + sum(nums, x-1);
+      return sumRecursive;
     }
 }
