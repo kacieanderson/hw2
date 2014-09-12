@@ -45,6 +45,7 @@ Now, the end of README.md says "Markdown is too easy" and then "Fancy git move."
 Explain why this status was reached.
 
 
+
 Part (g):
 What are the last three lines the TAs will see in the README.md file on GitHub if you perform the following operations:
 ...

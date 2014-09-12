@@ -11,6 +11,12 @@ make shape1
 
 Which action(s) will get called? What compiler command(s) with what exact parameters will get executed as a result of the action(s)?
 
+for make clean, rm -f *.o *~ shape1 shape2 is the action that will be called.
+for make shape1, $(CC) -c -o shape1 shape1.o shape.o $(CFLAGS) is the action that will be called.
+
+make clean tailors the commands to clean the compilation output from shape1, shape2.
+make takes shape1 as its parameter and creates its executable. I think.
+
 Part (c):
 What is the purpose of a .PHONY rule?
 
